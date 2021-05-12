@@ -26,3 +26,12 @@ public:
 		cout<<"\nThe length: "<<length<<" and breadth: "<<breadth<<endl;
 	}
 };
+int main()
+{
+	Box b;
+	b.input();
+	b.display();
+	b.calculate();
+	getch();
+	return 0;
+}
