@@ -26,6 +26,26 @@ public:
 		cout<<"\nThe length: "<<length<<" and breadth: "<<breadth<<endl;
 	}
 };
+class Box: public Rectangle
+{
+protected:
+	float height,sa;
+public:
+	void input(){
+		Rectangle:: input();
+		cout<<"\nEnter height:";
+		cin>>height;
+	}
+	void calculate(){
+		Rectangle:: calculate();
+		sa=2*(length*breadth+length*height+breadth*height);
+		cout<<"Total surface area= "<<sa<<endl;
+	}
+	void display(){
+		Rectangle:: display();
+		cout<<"\nThe height: "<<height<<endl;
+	}
+};
 int main()
 {
 	Box b;
