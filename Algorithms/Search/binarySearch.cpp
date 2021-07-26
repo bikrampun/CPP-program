@@ -25,7 +25,7 @@ int binarySearch(int a[],int size,int x)
 	j=size-1; //last index of array
 
 	while(i<j)	//exit only when one value is find out
-	{
+	{	//i.e. exit when array index is only one
 		mid=(i+j)/2; //split array into two sublist
 		if(a[mid]<x) //leftend changes in search interval
 			i=mid+1;
@@ -42,11 +42,19 @@ int main()
 {
 	int a[]={1,5,8,9,12,13,17,19};
 	int size=sizeof(a)/sizeof(int); //size of array
-	int loc=binarySearch(a,size,9); //arguments are array,array_size,search_value
+	cout<<"Array elements are:"<<endl;
+	for (int i = 0; i < size; ++i)
+	{
+		cout<<a[i]<<endl;
+	}
+	int item;
+	cout<<endl<<"Enter search item: ";
+	cin>>item;
+	int loc=binarySearch(a,size,item); //arguments are array,array_size,search_value
 	if(loc!=-1)
-		cout<<"Search found. Location="<<loc+1;
+		cout<<endl<<"Search found. Location="<<loc+1;
 	else
-		cout<<"Search not found.";
+		cout<<endl<<"Search not found.";
 	cout<<endl;
 	system("pause");
 	return 0;
