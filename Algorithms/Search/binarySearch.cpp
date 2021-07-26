@@ -1,5 +1,4 @@
-/*
-	Algorithm of binary search....
+/*	Algorithm of binary search....
 procedure binary search (x: integer, a1, a2, . . . , an: increasing integers)
 i := 1{i is left endpoint of search interval}
 j := n {j is right endpoint of search interval}
@@ -11,17 +10,15 @@ if x = ai then location := i
 else location := 0
 return location{location is the subscript i of the term ai equal to x, or 0 if x is not found}
 */
-
 #include <iostream>
 using namespace std;
 int binarySearch(int a[],int size,int x)
 {
 //warning:'sizeof' on array function parameter 'a' will return size of 'int*'
 //So, that array_size has passed as parameter
-	/*
-	i=leftend, j=rightend, mid=midpoint
-	(point of search interval)
-	loc=location
+	/* i=leftend, j=rightend, mid=midpoint
+		(point of search interval)
+		loc=location
 	*/
 	int i,j,mid,loc;
 	i=0; //startpoint=0 because of array index
