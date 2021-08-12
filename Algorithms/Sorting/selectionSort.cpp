@@ -1,7 +1,7 @@
 //selection sort
 #include <iostream>
 using namespace std;
-void selectionSort(int *a,int n)
+void selectionSort(int a[],int n)
 {
 	//n is size of array
 	for (int i=0;i<n-1;i++)
