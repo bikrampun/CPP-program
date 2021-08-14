@@ -4,9 +4,9 @@ using namespace std;
 void merge(int a[],int left,int mid,int right)
 {
 	//making two list(i.e. array)
-	//specifying sizes of array
-	int arrSize1=mid-left+1;
-	int arrSize2=right-mid;
+	//specifying sizes of array(index start from 0)
+	int arrSize1=mid-left+1; //+1 is added to make real size
+	int arrSize2=right-mid; //right-(mid+1)+1;
 	//creating temporary array
 	int *list1=new int[arrSize1];
 	int *list2=new int[arrSize2];
@@ -42,6 +42,8 @@ void merge(int a[],int left,int mid,int right)
 		//index2++;
 		//indexMerged++;
 	}
+	delete []list1;
+	delete []list2;
 }
 void mergeSort(int a[],int begin,int end)
 {
